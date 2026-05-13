@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Chinese Flashcard
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+  <h1>
+    Flashcard ภาษาจีน
+  </h1>
+
+
+  <!-- Flashcard -->
+
+  <div class="card">
+
+    <h2 id="chinese">
+      你好
+    </h2>
+
+
+    <div
+      id="answer"
+      class="hidden"
+    >
+
+      <p id="pinyin">
+        nǐ hǎo
+      </p>
+
+      <p id="meaning">
+        สวัสดี
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Buttons -->
+
+  <div class="buttons">
+
+    <button id="showBtn">
+
+      แสดงคำตอบ
+
+    </button>
+
+
+    <button id="randomBtn">
+
+      สุ่มคำศัพท์
+
+    </button>
+
+  </div>
+
+
+  <hr>
+
+
+  <!-- Add Vocabulary -->
+
+  <h2>
+    เพิ่มคำศัพท์
+  </h2>
+
+
+  <div class="form">
+
+    <input
+      type="text"
+      id="inputChinese"
+      placeholder="汉字"
+    >
+
+
+    <input
+      type="text"
+      id="inputPinyin"
+      placeholder="Pinyin"
+    >
+
+
+    <input
+      type="text"
+      id="inputMeaning"
+      placeholder="คำแปล"
+    >
+
+
+    <button id="addBtn">
+
+      เพิ่มคำศัพท์
+
+    </button>
+
+  </div>
+
+
+  <hr>
+
+
+  <!-- Word List -->
+
+  <h2>
+    รายการคำศัพท์
+  </h2>
+
+  <ul id="wordList"></ul>
+
+
+  <!-- JavaScript -->
+
+  <script src="vocabulary.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
