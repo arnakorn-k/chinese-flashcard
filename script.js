@@ -99,6 +99,9 @@ function randomWord() {
 
   answerDiv.classList.add("hidden");
 
+  showBtn.textContent =
+    "แสดงคำตอบ";
+
 }
 
 
@@ -237,14 +240,6 @@ function renderList() {
 
         ${word.meaning}
 
-        <br><br>
-
-        <button onclick="deleteWord(${index})">
-
-          ลบ
-
-        </button>
-
       `;
 
 
@@ -252,21 +247,6 @@ function renderList() {
 
     }
   );
-
-}
-
-
-// ========================
-// ลบคำศัพท์
-// ========================
-
-function deleteWord(index) {
-
-  vocabulary.splice(index, 1);
-
-  saveData();
-
-  renderList();
 
 }
 
