@@ -507,5 +507,3 @@ const vocabulary = [
   { chinese: "坐下", pinyin: "zuò xià", meaning: "นั่งลง" },
   { chinese: "做", pinyin: "zuò", meaning: "ทำ" }
 ];
-
-export default vocabulary;
