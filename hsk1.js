@@ -1,4 +1,4 @@
-const vocabulary = [
+const hsk1 = [
   { chinese: "爱", pinyin: "ài", meaning: "รัก" },
   { chinese: "爱好", pinyin: "ài hào", meaning: "งานอดิเรก" },
   { chinese: "八", pinyin: "bā", meaning: "แปด" },
