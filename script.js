@@ -3,16 +3,16 @@
 // ========================
 
 const savedData =
-  localStorage.getItem("vocabulary");
+  localStorage.getItem("hsk1");
 
 
 // ถ้ามีข้อมูลเก่า
 
 if (savedData) {
 
-  vocabulary.splice(
+  hsk1.splice(
     0,
-    vocabulary.length,
+    hsk1.length,
     ...JSON.parse(savedData)
   );
 
@@ -41,18 +41,6 @@ const showBtn =
 const randomBtn =
   document.getElementById("randomBtn");
 
-const addBtn =
-  document.getElementById("addBtn");
-
-const inputChinese =
-  document.getElementById("inputChinese");
-
-const inputPinyin =
-  document.getElementById("inputPinyin");
-
-const inputMeaning =
-  document.getElementById("inputMeaning");
-
 
 // ========================
 // สุ่มคำศัพท์
@@ -60,7 +48,7 @@ const inputMeaning =
 
 function randomWord() {
 
-  if (vocabulary.length === 0) {
+  if (hsk1.length === 0) {
 
     chineseText.textContent =
       "ไม่มีคำศัพท์";
@@ -77,12 +65,12 @@ function randomWord() {
 
   const randomIndex =
     Math.floor(
-      Math.random() * vocabulary.length
+      Math.random() * hsk1.length
     );
 
 
   const word =
-    vocabulary[randomIndex];
+    hsk1[randomIndex];
 
 
   chineseText.textContent =
@@ -147,68 +135,6 @@ randomBtn.addEventListener(
 
 
 // ========================
-// เพิ่มคำศัพท์
-// ========================
-
-addBtn.addEventListener(
-  "click",
-  () => {
-
-    const chinese =
-      inputChinese.value.trim();
-
-    const pinyin =
-      inputPinyin.value.trim();
-
-    const meaning =
-      inputMeaning.value.trim();
-
-
-    if (
-      chinese === "" ||
-      pinyin === "" ||
-      meaning === ""
-    ) {
-
-      alert("กรอกข้อมูลให้ครบ");
-
-      return;
-    }
-
-
-    const newWord = {
-
-      chinese: chinese,
-
-      pinyin: pinyin,
-
-      meaning: meaning
-
-    };
-
-
-    vocabulary.push(newWord);
-
-
-    saveData();
-
-    renderList();
-
-
-    inputChinese.value = "";
-
-    inputPinyin.value = "";
-
-    inputMeaning.value = "";
-
-
-    alert("เพิ่มคำศัพท์แล้ว");
-
-  }
-);
-
-
-// ========================
 // แสดงรายการ
 // ========================
 
@@ -221,7 +147,7 @@ function renderList() {
   wordList.innerHTML = "";
 
 
-  vocabulary.forEach(
+  hsk1.forEach(
     (word, index) => {
 
       const li =
@@ -258,8 +184,8 @@ function renderList() {
 function saveData() {
 
   localStorage.setItem(
-    "vocabulary",
-    JSON.stringify(vocabulary)
+    "hsk1",
+    JSON.stringify(hsk1)
   );
 
 }
